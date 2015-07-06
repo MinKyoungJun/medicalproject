@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  tiles-definitions PUBLIC
+	"-//Aapche Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd"
+>
+
+<tiles-definitions>
+
+	<!-- manager -->
+	<definition name="admin_layout1" template="/AdminTiles/admintemplate.jsp">
+		<put-attribute name="sidemenu" value="/AdminTiles/side_menu.jsp" />
+	</definition>
+
+	<definition name="manager_main" extends="admin_layout1">
+		<put-attribute name="body" value="/AdminJsp/Manager/admin_main.jsp"></put-attribute>
+	</definition>
+
+	<!-- 통계 -->
+	<definition name="manager_summarystatics" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/summarystatics.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_clientstatics" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/clientstatics.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="manager_accountstatics" extends="admin_layout1">
+		<put-attribute name="body" value="/AdminJsp/Manager/accountstatics.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="manager_salesstatics" extends="admin_layout1">
+		<put-attribute name="body" value="/AdminJsp/Manager/salesstatics.jsp"></put-attribute>
+	</definition>
+
+	<!-- 고객관리 -->
+	<definition name="manager_clientmanagement" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/clientmanagement.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_clientinfoupdate" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/clientinfoupdate.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_addinbodyform" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/addinbodyform.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_addnewregister" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/addnewregister.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_checkaddregister" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/checkaddregister.jsp"></put-attribute>
+	</definition>
+
+	<!-- 수업관리 -->
+	<definition name="manager_gxmanagement" extends="admin_layout1">
+		<put-attribute name="body" value="/AdminJsp/Manager/opengxclass.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_managegx" extends="admin_layout1">
+		<put-attribute name="body" value="/AdminJsp/Manager/managegx.jsp"></put-attribute>
+	</definition>
+
+	<!-- 직원관리 -->
+	<definition name="manager_epmmanagement" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/empmanagement.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_joinemployee" extends="admin_layout1">
+		<put-attribute name="body" value="/AdminJsp/Manager/joinemployee.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manager_empmanagementsalary" extends="admin_layout1">
+		<put-attribute name="body"
+			value="/AdminJsp/Manager/empmanagementsalary.jsp"></put-attribute>
+	</definition>
+
+	<!-- trainer -->
+	<definition name="admin_layout2" template="/AdminTiles/admintemplate2.jsp">
+		<put-attribute name="sidemenu2" value="/AdminTiles/side_menu1.jsp" />
+	</definition>
+	
+	<definition name="trainer_tclientmanagement" extends="admin_layout2">
+		<put-attribute name="body"
+			value="/AdminJsp/Trainer/tclientmanagement.jsp"></put-attribute>
+	</definition>
+
+	<!-- 트레이너 입장시 메인페이지를 아직 구현안했으므로 일단 회원관리쪽이 바로 보여지도록 경로 바꿧음 일단.. 메인보류 -->
+	<!-- <definition name="trainer_main" extends="admin_layout2"> <put-attribute 
+		name="body" value="/AdminJsp/Trainer/trainer_main.jsp"></put-attribute> </definition> -->
+
+	<definition name="trainer_schedule" extends="admin_layout2">
+		<put-attribute name="body"
+			value="/AdminJsp/Trainer/exerciseschedule.jsp"></put-attribute>
+	</definition>
+
+	<definition name="tclientmanagerment" extends="admin_layout2">
+		<put-attribute name="body"
+			value="/AdminJsp/Trainer/tclientmanagement.jsp"></put-attribute>
+	</definition>
+
+	<definition name="exerciseconfirm" extends="admin_layout2">
+		<put-attribute name="body"
+			value="/AdminJsp/Trainer/exerciseconfirm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="confirmExercise" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/MyPage/confirmExercise.jsp"></put-attribute>
+	</definition>
+
+	<definition name="confirm_Ex" extends="client_mypage">
+		<put-attribute name="body" value="/ClientJsp/MyPage/exconfirm.jsp"></put-attribute>
+	</definition>
+	<definition name="myPagedietMenu" extends="client_mypage">
+		<put-attribute name="body" value="/ClientJsp/MyPage/dietmenu.jsp"></put-attribute>
+	</definition>
+	<definition name="myPageinsertdietMenu" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/MyPage/insertdietmenu.jsp"></put-attribute>
+	</definition>
+	<definition name="detail_client" extends="admin_layout2">
+		<put-attribute name="body" value="/AdminJsp/Trainer/detailclient.jsp"></put-attribute>
+	</definition>
+
+	<definition name="exercise_inform" extends="admin_layout2">
+		<put-attribute name="body"
+			value="/AdminJsp/Trainer/exercise_inform.jsp" />
+	</definition>
+
+	<definition name="exercise_update" extends="admin_layout2">
+		<put-attribute name="body"
+			value="/AdminJsp/Trainer/exercise_update.jsp" />
+	</definition>
+	<!-- client -->
+	<!-- before login -->
+	<definition name="client_beforelogin" template="/ClientTiles/clienttemplate2.jsp">
+		<put-attribute name="sidemenu" value="/ClientTiles/side_menu2.jsp" />
+		<put-attribute name="footer" value="/ClientTiles/footer.jsp" />
+	</definition>
+
+	<definition name="client_main1" extends="client_beforelogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/clientmainsub.jsp"></put-attribute>
+	</definition>
+
+	<!-- after login -->
+	<definition name="client_afterlogin" template="/ClientTiles/clienttemplate3.jsp">
+		<put-attribute name="sidemenu" value="/ClientTiles/side_menu3.jsp" />
+		<put-attribute name="footer" value="/ClientTiles/footer.jsp" />
+	</definition>
+
+	<definition name="client_main2" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/clientmainsub.jsp"></put-attribute>
+	</definition>
+
+	<!-- mypage -->
+	<definition name="client_mypage" template="/ClientTiles/clienttemplate4.jsp">
+		<put-attribute name="sidemenu" value="/ClientTiles/side_menu4.jsp" />
+		<put-attribute name="footer" value="/ClientTiles/footer.jsp" />
+	</definition>
+
+	<definition name="client_main3" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/clientmainsub.jsp"></put-attribute>
+	</definition>
+
+	<definition name="myInfo" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/MyPage/mypage_myinfo.jsp"></put-attribute>
+	</definition>
+
+	<definition name="myInfoUpdate" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/MyPage/mypage_myinfoupdate.jsp"></put-attribute>
+	</definition>
+
+	<definition name="myPageInbody" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/MyPage/mypage_inbody.jsp"></put-attribute>
+	</definition>
+
+	<definition name="myPageInbody2" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/MyPage/mypage_inbody2.jsp"></put-attribute>
+	</definition>
+
+	<definition name="confirmExercise" extends="client_mypage">
+		<put-attribute name="body"
+			value="/ClientJsp/MyPage/confirmExercise.jsp"></put-attribute>
+	</definition>
+
+	<definition name="confirm_Ex" extends="client_mypage">
+		<put-attribute name="body" value="/ClientJsp/MyPage/exconfirm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mypageattendance" extends="client_mypage">
+		<put-attribute name="body" value="/ClientJsp/MyPage/attendance.jsp"></put-attribute>
+	</definition>
+
+	<!-- notice -->
+	<!-- beforlogin -->
+	<definition name="client_nologinnoticelist" extends="client_beforelogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/nologinnoticelist.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_nologinnoticedetail" extends="client_beforelogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/nologinnoticedetail.jsp"></put-attribute>
+	</definition>
+
+	<!-- afterlogin -->
+	<definition name="client_noadminnoticelist" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/nologinnoticelist.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_noadminnoticedetail" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/nologinnoticedetail.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_noticelist" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/noticelist.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_noticedetail" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/noticedetail.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_notice" extends="client_afterlogin">
+		<put-attribute name="body" value="/ClientJsp/CommonPage/notice.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_noticeupdate" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/noticeupdate.jsp"></put-attribute>
+	</definition>
+
+	<!-- 칼로리계산기 after login -->
+	<definition name="client_kcalmachine" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/AfterLogin/kcal_machine.jsp" />
+	</definition>
+
+	<definition name="client_exercisekcalmachine" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/AfterLogin/kcal_excercise.jsp" />
+	</definition>
+
+	<!-- QnA -->
+	<!-- beforlogin -->
+	<definition name="client_qnanologinlist" extends="client_beforelogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnanologinlist.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_qnanologindetail" extends="client_beforelogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnanologindetail.jsp"></put-attribute>
+	</definition>
+
+	<!-- afterlogin -->
+
+	<definition name="client_qnalist" extends="client_afterlogin">
+		<put-attribute name="body" value="/ClientJsp/CommonPage/qnalist.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_qnadetail" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnadetail.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_qnaotherdetail" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnanologindetail.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_qnaadminlogindetail" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnaadminlogindetail.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_qnaanswerform" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnaanswerform.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_qnainsert" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnainsertform.jsp"></put-attribute>
+	</definition>
+
+	<definition name="client_qnaupdate" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/qnaupdateform.jsp"></put-attribute>
+	</definition>
+
+	<!-- introduce -->
+	<!-- before login -->
+	<definition name="before_introduce" extends="client_beforelogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/introduce.jsp"></put-attribute>
+	</definition>
+	<!-- after login -->
+	<definition name="after_introduce" extends="client_afterlogin">
+		<put-attribute name="body"
+			value="/ClientJsp/CommonPage/introduce.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
+
+
+
+
+
+
+
+
+
