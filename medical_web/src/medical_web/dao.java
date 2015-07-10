@@ -15,6 +15,7 @@ public class dao {
 
 	public void testDao(client client) {
 		myTemplate.getMapper(mapper.class).test(client);
+		
 	}
 
 }

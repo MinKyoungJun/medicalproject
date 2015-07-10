@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style type="text/css">
+#loginid{
+	position: absolute;
+	margin-left: 52%;
+	margin-top: 18%;
+	width:15%;
+	z-index: 2;
+}
+#loginpass{
+	position: absolute;
+	margin-left: 52%;
+	margin-top: 20%;
+	width:15%;
+	z-index: 2;	
+}
+#loginment{
+	position: absolute;
+	margin-left: 52%;
+	margin-top: 10%;
+	height:15%;
+	width:20%;
+	z-index: 2;
+}
+#loginbutton{
+	position: absolute;
+	margin-left: 67.5%;
+	margin-top: 18%;
+	height: 8%;
+	width: 9%;
+	z-index: 2;
+} 
+#loginbackground{
+	position: absolute;
+	height: 75%;
+	width: 60%;
+	margin-left: 20%;
+	z-index: 1;
+}
+#join{
+	position: absolute;
+	height: 15%;
+	width:25%;
+	margin-left: 25%;
+	margin-top: 37%;
+}
+#idpwsearch{
+	position: absolute;
+	height: 15%;
+	width:25%;
+	margin-left: 50%;
+	margin-top: 37%;
+}
+</style>
+</head>
+<body>
+	<div>
+	<input class="form-control" id="loginid" type="text" placeholder="아이디" maxlength="20" >
+	<input class="form-control" id="loginpass" type="text" placeholder="패스워드" maxlength="20" >
+	<img id="loginbackground" alt="로그인배경화면" src="Image/loginbackgound.jpg">
+	<img id="loginment" alt="로그인멘트" src="Image/loginment.JPG">
+	<a href=""><img id="loginbutton" alt="로그인버튼" src="Image/loginbutton.JPG"></a>
+	</div>
+	<div>
+	<a href="join.jsp"><img id="join" alt="회원가입" src="Image/joinimg.JPG"></a>
+	<a href=""><img id="idpwsearch" alt="아이디 패스워드 찾기" src="Image/idpwsearch.JPG"></a>
+	</div>
+</body>
+</html>
